@@ -1,0 +1,161 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.sign-in-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.sign-in {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-image {
+    width: 120px;
+    height: 120px;
+    background-image: url('../assets/p.png');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+.sign-in form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-in input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.sign-in input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sign-in-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  background-image: url('../assets/12.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.google-sign-in {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.toggle-view {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.toggle-view button {
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.error {
+    color: #ff6b6b;
+    margin-bottom: 10px;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 320px;
+    perspective: 1000px;
+    margin-bottom: 20px;  /* Add margin to separate from inputs */
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+}
+
+.circle:hover {
+    transform: rotate(360deg);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), inset -2px -2px rgba(0, 255, 255, 0.5);
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.3), rgba(0, 255, 255, 0.1));
+}
+
+.circle:nth-child(1) { width: 250px; height: 250px; bottom: 0; left: 25px; }
+.circle:nth-child(2) { width: 200px; height: 200px; bottom: 0; left: 50px; }
+.circle:nth-child(3) { width: 150px; height: 150px; bottom: 0; left: 75px; }
+.circle:nth-child(4) { width: 100px; height: 100px; bottom: 0; left: 100px; }
+.circle:nth-child(5) { width: 75px; height: 75px; bottom: 0; left: 112.5px; }
+.circle:nth-child(6) { width: 50px; height: 50px; bottom: 0; left: 125px; }
+
+.circle span {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    margin: 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.pop {
+    animation: pop 0.5s ease-in-out forwards;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@media (max-height: 600px) {
+    .container {
+        display: none;
+    }
+}

@@ -1,0 +1,12 @@
+fastapi==0.78.0
+uvicorn[standard]==0.18.3
+pydantic==1.9.2
+python-dotenv==0.20.0
+httpx==0.23.0
+openai==0.27.8
+bleach==5.0.1
+pytest==7.1.3
+pytest-mock==3.8.2
+slowapi==0.1.5
+firebase-admin==6.2.0
+websockets==10.3
