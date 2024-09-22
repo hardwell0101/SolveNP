@@ -47,7 +47,8 @@ The project is organized into two main directories:
 
 The frontend Nginx configuration is set up to proxy requests to the backend API:
 
-```nginx:frontend/nginx.conf
+```
+nginx:frontend/nginx.conf
 ```
 
 ### Continuous Deployment with GitHub Actions
